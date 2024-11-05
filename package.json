@@ -1,0 +1,9 @@
+{
+  "name": "kaiserphemi.github.io",
+  "version": "1.0.0",
+  "description": "Personal Site",
+  "main": "index.js",
+  "repository": "git@github.com:KaiserPhemi/kaiserphemi.github.io.git",
+  "author": "Oluwafemi Akinwa <kaiser.phemi@protonmail.ch>",
+  "license": "MIT"
+}
