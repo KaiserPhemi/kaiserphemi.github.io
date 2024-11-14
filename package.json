@@ -8,13 +8,19 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "webpack serve --mode production",
-		"dev": "webpack serve --mode development --open",
+		"dev": "webpack serve --mode development",
 		"build": "webpack --mode production",
 		"lint:fix": "eslint -c eslint.config.js --fix"
 	},
 	"dependencies": {
+		"axios": "^1.7.7",
+		"crypto-browserify": "^3.12.1",
+		"dotenv-webpack": "^8.1.0",
+		"lucide-react": "^0.456.0",
+		"node-polyfill-webpack-plugin": "^4.0.0",
 		"react": "^18.3.1",
-		"react-dom": "^18.3.1"
+		"react-dom": "^18.3.1",
+		"react-icons": "^5.3.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.25.9",
