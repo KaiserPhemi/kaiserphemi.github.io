@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #4A628A;
+  --text-primary: #222222;
+  --text-secondary: #7b7b7b;
+  --bg-primary: #f8f8f8;
+  --bg-secondary: #ffffff;
+  --transition-duration: 300ms;
+}
+
+.dark {
+  --text-primary: #f8f8f8;
+  --text-secondary: #f8f8f8;
+  --bg-primary: #222222;
+  --bg-secondary: #222222;
+}
