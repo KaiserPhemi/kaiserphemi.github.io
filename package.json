@@ -20,7 +20,10 @@
 		"node-polyfill-webpack-plugin": "^4.0.0",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
-		"react-icons": "^5.3.0"
+		"react-icons": "^5.3.0",
+		"react-router-dom": "^6.28.0",
+		"sass": "^1.81.0",
+		"sass-loader": "^16.0.3"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.25.9",

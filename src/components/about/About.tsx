@@ -1,44 +1,14 @@
 // react libraries
 import React, { useState, useEffect } from "react";
 
-// third-party libraries
-import { Moon, Sun } from "lucide-react";
-
 // styles
 import "./AboutPage.css";
 
 // interface(s)
-import { Skill, NavLink } from "./About.interface";
-
+import { Skill } from "./About.interface";
 
 // About page component
-const AboutPage: React.FC = () => {
-	const [darkMode, setDarkMode] = useState<boolean>(false);
-
-  // 
-	useEffect(() => {
-		if (darkMode) {
-			document.documentElement.classList.add("dark");
-		} else {
-			document.documentElement.classList.remove("dark");
-		}
-	}, [darkMode]);
-
-  /**
-   * Toggle dark mode
-   */
-	const toggleDarkMode = () => {
-		setDarkMode(!darkMode);
-	};
-
-	const navLinks: NavLink[] = [
-		{ href: "/", label: "Home" },
-		{ href: "/about", label: "About" },
-		{ href: "/portfolio", label: "Portfolio" },
-		{ href: "/blog", label: "Blog" },
-		{ href: "/contact", label: "Contact" },
-	];
-
+const AboutPage: React.FC = ({ darkMode }: any) => {
 	const skills: Skill[] = [
 		{ id: "1", name: "JavaScript" },
 		{ id: "2", name: "TypeScript" },
@@ -53,35 +23,8 @@ const AboutPage: React.FC = () => {
 
 	return (
 		<div className={`app ${darkMode ? "dark" : ""}`}>
-			<header className="header">
-				<div className="header-container">
-					<a href="/" className="logo">
-						DevName
-					</a>
-					<nav className="nav">
-						{navLinks.map((link) => (
-							<a key={link.href} href={link.href} className="nav-link">
-								{link.label}
-							</a>
-						))}
-					</nav>
-					<button
-						className="theme-toggle"
-						onClick={toggleDarkMode}
-						aria-label="Toggle dark mode"
-					>
-						{darkMode ? (
-							<Sun className="theme-icon" />
-						) : (
-							<Moon className="theme-icon" />
-						)}
-					</button>
-				</div>
-			</header>
-
 			<main className="main">
 				<h1 className="page-title">About Me</h1>
-
 				<div className="content">
 					<div className="profile-image">
 						<img
@@ -125,23 +68,6 @@ const AboutPage: React.FC = () => {
 					</div>
 				</div>
 			</main>
-
-			<footer className="footer">
-				<div className="footer-container">
-					<p className="copyright">&copy; 2024 DevName. All rights reserved.</p>
-					<div className="social-links">
-						<a href="#" className="social-link">
-							LinkedIn
-						</a>
-						<a href="#" className="social-link">
-							GitHub
-						</a>
-						<a href="#" className="social-link">
-							Twitter
-						</a>
-					</div>
-				</div>
-			</footer>
 		</div>
 	);
 };

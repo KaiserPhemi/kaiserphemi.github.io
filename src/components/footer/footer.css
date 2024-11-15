@@ -1,0 +1,31 @@
+.footer {
+	background-color: #222222;
+	color: #f8f8f8;
+	margin-top: 3rem;
+	padding: 2rem 1rem;
+}
+
+.app.dark .footer {
+	background-color: #f8f8f8;
+	color: #222222;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+@media (min-width: 768px) {
+	.footer-container {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.copyright {
+	font-size: 0.875rem;
+}
